@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/userdetails.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <title>USER DETAILS</title>
+</head>
+<body>
+        <nav>
+          <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+          </div>
+          <a class="logo" href="/">FAKENATIC</a>   
+          <div class="nav-items">
+          <li><a class="nav-link" href="/lets_create_it"><b>Let's Create it</b></a></li>
+          <li><a class="nav-link" href="/how_it_works"><b>How it work's</b></a></li>
+          <li><a class="nav-link" href="/plans"><b>Plans</b></a></li>
+          <li><a class="nav-link" href="/logout" ><b>Logout</b></a></li>
+          </div>
+          <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+          </div>
+        </nav>
+        <script>
+          const menuBtn = document.querySelector(".menu-icon span");
+          const cancelBtn = document.querySelector(".cancel-icon");
+          const items = document.querySelector(".nav-items");
+          menuBtn.onclick = ()=>{
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+          }
+          cancelBtn.onclick = ()=>{
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+          }
+        </script>
+
+          <div class="center">
+          <h1 style="font-size:1.5em;">YOUR DETAILS</h1>
+          <form method="post">
+            <br>
+              <div class="txt_field">
+              <label>Username (<p style="display: inline;">Max length:50</p>)</label>
+              <input type="text" name="u-name" id="u--name" maxlength="50" value={{ account.0.1 }}    >
+              
+              </div>
+
+              <div class="txt_field" >
+              <label>Fullname</label>
+              <input type="txt_field" name="full-name" id="full-name" maxlength="100"  value={{ account.0.2 }} >            
+              </div>
+            
+              <div class="txt_field">
+              <label>Email</label>
+              <input type="email" name="Email" id="Email" maxlength="100"  value={{ account.0.3 }} >
+              </div>         
+    
+              <div class="txt_field" >
+              <label>Contact (<p style="display: inline;">Format: 03xxxxxxxxx</p>)</label>
+              <input type="tel" pattern="[0-3]{2}[0-9]{9}" name="contact" id="contact" maxlength="11"  value={{ account.0.4 }} >
+              
+              </div>
+
+
+              <div class="txt_field">
+              <label>Organization name</label>
+              <input type="txt_field"  name="org-name" id="org-name" maxlength="200"  value={{ org_rows.0.1 }}>
+              </div>
+
+              <div class="txt_field" >
+              <label>Organization contact (<p  style="display: inline;">Format: 03xxxxxxxxx</p>) </label>
+              <input type="tel" pattern="[0-3]{2}[0-9]{9}" name="org-contact"  id="org-contact" maxlength="11"  value={{ org_rows.0.2 }}>
+              
+              </div>
+
+              <div class="txt_field">
+              <label>Organization email</label>
+              <input type="email" name="org-email" id="org-email" maxlength="100"  value={{ org_rows.0.3 }}>
+              </div>
+  
+              <div class="txt_field" >
+              <label>Organization location</label>
+              <input type="txt_field" name="org-location" id="org-location" maxlength="200"  value={{ org_rows.0.4 }}>
+              </div>
+  
+              <div class="txt_field" >
+              <label>Role</label>
+              <input type="txt_field" name="role" id="role" maxlength="100"  value={{ account.0.7 }} >
+              </div>
+
+              <!-- <div class="txt_field" style="margin-top: 40px;margin-bottom: 60px;">
+             <button class="catalog"><a class="nav-link" href="/user_catalog"><b>VIDEO CATALOG</b></a></button> 
+              <input class="catalog"style="margin-left: 30px;"type="submit" value=" UPDATE"> 
+              </div>  -->
+          
+          </form>
+          <button><a class="ctg_btn" href="/user_catalog"><b>VIDEO CATALOG</b></a></button>
+        </div>
+
+  
+  
+  
+
+
+        <footer class="footer">
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+   </div>
+   <div style="width:100%;text-align:center;">
+     <h4 style="text-transform: capitalize;font-weight: 600;color: #CCC;" >All Rights Reserved, Fakenatic <script>document.write(new Date().getFullYear())</script></h4>
+   </div>
+    </footer>
+
+</body>
+</html>

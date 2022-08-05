@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: white;
+    height: 100vh;
+  
+} */
+body {
+  margin: 0;
+ padding: 0;
+ background: white;
+ height: 100vh;
+}
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+  text-align: center;
+  padding-top: 100px;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+/*nav bar*/
+/* nav{
+  background: #24262b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  
+}
+nav .logo{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-right: 630px;
+  margin-left: 22px;
+
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  float: right;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: #e91e63;
+  border-bottom: solid #e91e63 2px ;
+}
+nav .menu-icon,
+nav .cancel-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon{
+  display: none;
+}
+@media (max-width: 1345px)
+{
+nav .logo{
+  margin-right: 580px;
+}
+}
+@media (max-width: 1300px)
+{
+nav .logo{
+  margin-right: 500px;
+}
+}
+@media (max-width: 1250px){
+  nav .nav-items li a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -130%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+} */
+nav{
+  background: #24262b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  
+}
+nav .logo{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-right: 630px;
+  margin-left: 22px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  float: right;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+nav .nav-items li a:hover{
+  color: #e91e63;
+  border-bottom: solid #e91e63 2px ;
+}
+nav .menu-icon,
+nav .cancel-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon{
+  display: none;
+}
+
+.logo{
+  padding-left:50px;
+}
+@media (max-width: 1345px)
+{
+nav .logo{
+  margin-right: 580px;
+}
+}
+@media (max-width: 1300px)
+{
+nav .logo{
+  margin-right: 500px;
+}
+}
+@media (max-width: 1250px){
+  nav .nav-items li a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -130%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+
+/* main content */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.heading{
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: normal;
+    flex: content;
+    font-style:normal ;
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:#cddbdb;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+section.active::before{
+  opacity: 1;
+}
+.container{
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 5px 10px;
+  position: relative;
+}
+ section.active .container{
+   visibility: hidden;
+ }
+.container .main-video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+  transition: all 0.4s ease;
+}
+section.active .container .main-video{
+  transform:translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+.container .main-video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .main-video .close{
+  position: absolute;
+  top: -10px;
+  right: -36px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: auto;
+  opacity: 0.6;
+}
+.container .main-video .close:hover{
+  opacity: 1;
+}
+.container .videos{
+  height: 200px;
+  margin: 5px 0;
+  border: 1px solid silver;
+  padding: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.container .videos::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.container .videos video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  outline: none;
+  pointer-events: none;
+}
+.container .videos i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+  pointer-events: none;
+}
+@media (max-width: 750px) {
+  .container .main-video{
+    position: fixed;
+    width: 83%;
+  }
+  .container .videos{
+    width: 100%;
+    height: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .container .videos{
+    width: 100%;
+    height: 250px;
+  }
+}
+
+
+/*footer*/
+.footer{
+	background-color: #24262b;
+    padding: 30px 50px;
+    margin-top: 60px;
+  }
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 16px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+	font-family: 'Poppins', sans-serif;
+
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}

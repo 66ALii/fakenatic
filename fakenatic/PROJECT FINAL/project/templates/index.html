@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/index.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>HOME PAGE</title>
+  </head>
+  <body>
+          <!--nav bar-->
+          <nav>
+           <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+           </div>
+           <a class="logo" href="/">FAKENATIC</a>   
+           <div class="nav-items">
+           <li><a class="nav-link" href="/lets_create_it"><b>Let's Create it</b></a></li>
+           <li><a class="nav-link" href="/how_it_works"><b>How it work's</b></a></li>
+           <li><a class="nav-link" href="/plans"><b>Plans</b></a></li>
+           <li><a class="nav-link" href="/accounts"><b>Account</b></a></li>
+           </div>
+           <div class="cancel-icon">
+           <span class="fas fa-times"></span>
+           </div>
+          </nav>
+          <script>
+            const menuBtn = document.querySelector(".menu-icon span");
+            const cancelBtn = document.querySelector(".cancel-icon");
+            const items = document.querySelector(".nav-items");
+            menuBtn.onclick = ()=>{
+              items.classList.add("active");
+              menuBtn.classList.add("hide");
+              cancelBtn.classList.add("show");
+            }
+            cancelBtn.onclick = ()=>{
+              items.classList.remove("active");
+              menuBtn.classList.remove("hide");
+              cancelBtn.classList.remove("show");
+            }
+          </script>
+          <!--image-->
+          <img class="m-image" src="{{url_for('static',filename='/web pictures/slideshow1 (1).jpg') }}"/>
+          <!-- article -->
+          <div class="card-articlemain">
+              <p>A TV anchor has joined a Chinese news agency, but with a twist: he isn’t human. China’s state-run Xinhua<br>
+                 News Agency has launched an artificial intelligence (AI) anchor, a move it claims to be a world first.<br>
+                 “English AI Anchor” debuted Thursday at the World Internet Conference in the country’s eastern Zhejiang Province.</p>
+              <button class="article_button" >
+                <a href="https://www.cnbc.com/2018/11/09/the-worlds-first-ai-news-anchor-has-gone-live-in-china.html"> 
+                  READ MORE!
+                </a>
+                </button>          
+          </div>
+          <br><br><br><br>
+          <!-- quote -->
+             <div class="quote">
+              <p style="text-align: center;"><b>“Our intelligence is what makes us human, and AI is an extension of that quality.” </b></p>
+              <p style="text-align: center;">Yann LeCun</p>
+             </div>
+          <!-- proud users -->
+          <h2 class="pd-heading">PROUD USERS</h2>
+          <div class="pd-users">
+          <div class="card">
+            <div class="card-image1"></div>
+            <div class="card-text1">
+              <span class="date">4 days ago</span>
+              <h2>  JOSH</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image2"></div>
+            <div class="card-text2">
+              <span class="date">8 days ago</span>
+              <h2>  ALEX</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image3"></div>
+            <div class="card-text3">
+              <span class="date">12 days ago</span>
+              <h2>  PHILL</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+            </div>
+          </div>
+          </div>
+          <!-- footer -->    
+          <footer class="footer">
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+     </div>
+     <div style="width:100%;text-align:center;">
+       <h4 style="text-transform: capitalize;font-weight: 600;color: #CCC;" >All Rights Reserved, Fakenatic <script>document.write(new Date().getFullYear())</script></h4>
+     </div>
+      </footer>      
+        </body>
+</html>

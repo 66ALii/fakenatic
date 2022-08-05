@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/admin.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>ALL USERS</title>
+</head>
+<body>
+      <nav>
+        <div class="menu-icon">
+          <span class="fas fa-bars"></span>
+        </div>
+        <a class="logo" href="/">FAKENATIC</a>   
+        <div class="nav-items">
+        <li><a class="nav-link" href="/lets_create_it"><b>Let's Create it</b></a></li>
+        <li><a class="nav-link" href="/how_it_works"><b>How it work's</b></a></li>
+        <li><a class="nav-link" href="/plans"><b>Plans</b></a></li>
+        <li><a class="nav-link" href="/logout" ><b>Logout</b></a></li>
+        </div>
+        <div class="cancel-icon">
+          <span class="fas fa-times"></span>
+        </div>
+      </nav>
+      <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        menuBtn.onclick = ()=>{
+          items.classList.add("active");
+          menuBtn.classList.add("hide");
+          cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = ()=>{
+          items.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          cancelBtn.classList.remove("show");
+        }
+      </script>
+
+
+<div class="table_page">
+  <br>
+  <br>
+<h1>USERS DETAILS</h1>
+<br>
+<div class="tables" >
+<table >
+    <tr class="table_style">
+      <th>User id</th>
+      <th>User Name</th>
+      <th>User Fullname</th>
+      <th>User Email</th>
+      <th>User Contact</th>
+      <th>Role</th>
+      <th>Organization Name</th>
+      <th>Organization Contact</th>
+      <th>Organization Email</th>
+      <th>Organization Location</th>
+      <th>Video List</th>
+    </tr>    
+    {% for all in all %}
+    <tr>
+      <td>{{ all.0 }}</td>
+      <td>{{ all.1 }}</td>
+      <td>{{ all.2 }}</td>
+      <td>{{ all.3 }}</td>
+      <td>{{ all.4 }}</td>
+      <td>{{ all.7 }}</td>
+      <td>{{ all.9 }}</td>
+      <td>{{ all.10 }}</td>
+      <td>{{ all.11 }}</td>
+      <td>{{ all.12 }}</td>
+      <td><button class="use-address" id="btnn"><a class="button"   ><b>Catalog</b></a></button></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- <table >
+    <tr class="table_style">
+      <th>Organization Name</th>
+      <th>Organization Contact</th>
+      <th>Organization Email</th>
+      <th>Organization Location</th>
+      <th>Video List</th>
+    </tr>    
+    {% for cmporgss in cmporgs %}
+    <tr>
+      <td>{{ cmporgss.1 }}</td>
+      <td>{{ cmporgss.2 }}</td>
+      <td>{{ cmporgss.3 }}</td>
+      <td>{{ cmporgss.4 }}</td>
+      <td><button><a class="button" href="/admin_catalog"><b>Catalog</b></a></button></td>
+      
+    </tr>
+    {% endfor %}
+
+</table> -->
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(".use-address").click(function() {
+    var current_row = $(this).parent().closest("tr");       
+    var user_id = current_row.find('td:eq(0)').text();    
+    location.href="http://127.0.0.1:5000/admin_catalog?user_id="+user_id
+
+    // $.ajax({
+    //   type : 'get',
+    //   url : "http://127.0.0.1:5000/admin_catalog",
+    //   contentType: 'application/json;charset=UTF-8',
+    //   data : {'user_id':user_id}
+    // });
+   // $("#resultas").append($item);       // Outputs the answer
+});
+</script>
+
+
+<footer class="footer">
+  <div class="footer-col">
+    <h4>follow us</h4>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+<div style="width:100%;text-align:center;">
+<h4 style="text-transform: capitalize;font-weight: 600;color: #CCC;" >All Rights Reserved, Fakenatic <script>document.write(new Date().getFullYear())</script></h4>
+</div>
+</footer>
+
+
+</body>
+</html>
